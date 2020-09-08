@@ -124,6 +124,8 @@ aside {
   background-color: yellow;
 }
 
+/* NOTIFICA */
+
 .notifica-attivazione {
   height: 50px;
   width: 100%;
@@ -153,6 +155,51 @@ aside {
   font-size: 9px;
   color: #9A9FA1;
 }
+
+/* /NOTIFICA */
+
+/* INPUT */
+.container-input {
+  padding: 3px;
+}
+.search-container {
+  background-color: #FFF;
+  position: relative;
+  border-radius: 3px;
+  padding: 3px 10px 3px 50px;
+}
+.search-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-right: 1px solid #9A9FA1;;
+  color: #FFF;
+  outline: 0;
+  width: 45px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-box {
+  background-color: transparent;
+  outline: none;
+  font-size: 15px;
+  border: 0;
+}
+
+.search-button i {
+  font-size: 11px;
+  color: #9A9FA1;
+}
+
+.search-container input::placeholder {
+  font-size: 11px;
+}
+
+/* /INPUT */
+
+
 /* /ASIDE */
 
 

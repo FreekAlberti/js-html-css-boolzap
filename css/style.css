@@ -254,7 +254,47 @@ aside {
   width: 70%;
   background-image: url(../img/mine.jpg);
   overflow: auto;
+  display: flex;
+  justify-content: center;
 }
+
+.spazio-messaggi {
+  height: 100%;
+  width: 85%;
+  padding: 20px 0;
+}
+
+.linea-ricevuti {
+  display: flex;
+  justify-content: flex-start;
+  margin: 5px 0;
+}
+
+.linea-inviati {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px 0;
+}
+
+.messaggi-ricevuti {
+  float: left;
+  display: block;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.messaggi-inviati {
+  float: right;
+  display: block;
+  padding: 10px;
+  background-color: green;
+  border-radius: 5px;
+}
+
+/* /MAIN CONTENT */
+
+/* INSERIMENTO TESTO */
 
 .inserimento-testo {
   position: absolute;
@@ -282,4 +322,4 @@ aside {
   color: #9A9FA1;
 }
 
-/* /MAIN CONTENT */
+/* /INSERIMENTO TESTO */

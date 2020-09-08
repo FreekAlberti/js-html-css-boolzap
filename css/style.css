@@ -267,29 +267,37 @@ aside {
 .linea-ricevuti {
   display: flex;
   justify-content: flex-start;
-  margin: 5px 0;
 }
 
 .linea-inviati {
   display: flex;
   justify-content: flex-end;
-  margin: 5px 0;
 }
 
 .messaggi-ricevuti {
-  float: left;
   display: block;
   padding: 10px;
   background-color: white;
   border-radius: 5px;
+  margin: 5px 0;
 }
 
 .messaggi-inviati {
-  float: right;
   display: block;
   padding: 10px;
-  background-color: green;
+  background-color: #D4F1BA;
   border-radius: 5px;
+  margin: 5px 0;
+  max-width: 30ch;
+  word-break: break-word;
+}
+
+.nuovi-messaggi {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  margin: 5px 0;
 }
 
 /* /MAIN CONTENT */

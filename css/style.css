@@ -95,15 +95,15 @@ header {
   justify-content: center;
 }
 
-.info-chat {
+.info-chat-corrente {
   margin-left: 10px;
 }
 
-.nome-chat {
+.nome-chat-corrente, .nome-chat {
   font-size: 12px;
 }
 
-.accesso-chat {
+.accesso-chat-corrente, .anteprima {
   font-size: 10px;
   color: #9A9FA1;
 }
@@ -121,7 +121,7 @@ aside {
   left: 0;
   height: calc(100% - 50px);
   width: 300px;
-  background-color: yellow;
+  background-color: #fff;
 }
 
 /* NOTIFICA */
@@ -165,6 +165,7 @@ aside {
 .search-container {
   background-color: #FFF;
   position: relative;
+  border: 1px solid #F1F1F1;
   border-radius: 3px;
   padding: 3px 10px 3px 50px;
 }
@@ -172,7 +173,7 @@ aside {
   position: absolute;
   left: 0;
   top: 0;
-  border-right: 1px solid #9A9FA1;;
+  border-right: 1px solid #F1F1F1;
   color: #FFF;
   outline: 0;
   width: 45px;
@@ -199,6 +200,45 @@ aside {
 
 /* /INPUT */
 
+/* LISTA CHAT */
+
+.lista-chat li {
+  list-style: none;
+}
+
+.casella {
+  height: 55px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  border-bottom: 1px solid #F1F1F1;
+}
+
+.active {
+  background-color: #E9EBEB;
+}
+
+.utente {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.utente img {
+  height: 45px;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+.orario {
+  font-size: 9px;
+  color: #9A9FA1;
+}
+
+
+/* /LISTA CHAT */
 
 /* /ASIDE */
 

@@ -1,4 +1,18 @@
 $(document).ready(function() {
+  $(".search-box").keyup(function() {
+      var toSearch = $(".search-box").val().toUpperCase();
+      $(".nome-chat").each(function() {
+          var match = $(this).text().toUpperCase();
+          if (match.includes(toSearch) == true) {
+            $(this).parents(".casella").show();
+          } else {
+            $(this).parents(".casella").hide();
+          }
+        }
+      )
+    }
+  );
+
   $(".inserimento-testo .fas").click(function() {
     sendMessage();
     setTimeout(rispostaCPU, 2000);

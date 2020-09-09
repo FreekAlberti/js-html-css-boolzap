@@ -276,22 +276,30 @@ aside {
 
 .messaggi-ricevuti {
   display: block;
+  position: relative;
+  margin: 5px 0;
+}
+
+.messaggio-testo-ricevuto {
   padding: 10px;
   background-color: white;
   border-radius: 5px;
-  margin: 5px 0;
-  position: relative;
+  max-width: 30ch;
+  word-break: break-word;
 }
 
 .messaggi-inviati {
   display: block;
+  position: relative;
+  margin: 5px 0;
+}
+
+.messaggio-testo-inviato {
   padding: 10px;
   background-color: #D4F1BA;
   border-radius: 5px;
-  margin: 5px 0;
   max-width: 30ch;
   word-break: break-word;
-  position: relative;
 }
 
 .orario {
@@ -306,7 +314,6 @@ aside {
   justify-content: center;
   align-items: flex-end;
   flex-direction: column;
-  margin: 5px 0;
 }
 
 /* /MAIN CONTENT */

@@ -1,23 +1,21 @@
 $(document).ready(function() {
   $(".inserimento-testo .fas").click(function() {
-    var inputValue = $("#addTest").val();
-    if (inputValue != "") {
-      var myClone = $(".linea-inviati .messaggi-inviati").clone();
-      myClone.text(inputValue);
-      $(".nuovi-messaggi").append(myClone);
-      $("#addTest").val("");
-    }
+    sendMessage();
   });
 
   $("#addTest").keydown(function(event) {
     if (event.which == 13) {
-      var inputValue = $("#addTest").val();
-      if (inputValue != "") {
-        var myClone = $(".linea-inviati .messaggi-inviati").clone();
-        myClone.text(inputValue);
-        $(".nuovi-messaggi").append(myClone);
-        $("#addTest").val("");
-      }
+      sendMessage();
     }
   });
 });
+
+function sendMessage() {
+  var inputValue = $("#addTest").val();
+  if (inputValue != "") {
+    var myClone = $(".linea-inviati .messaggi-inviati").clone();
+    myClone.text(inputValue);
+    $(".nuovi-messaggi").append(myClone);
+    $("#addTest").val("");
+  }
+}

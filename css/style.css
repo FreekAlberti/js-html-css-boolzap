@@ -280,6 +280,7 @@ aside {
   background-color: white;
   border-radius: 5px;
   margin: 5px 0;
+  position: relative;
 }
 
 .messaggi-inviati {
@@ -290,6 +291,14 @@ aside {
   margin: 5px 0;
   max-width: 30ch;
   word-break: break-word;
+  position: relative;
+}
+
+.orario {
+  font-size: 8px;
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
 }
 
 .nuovi-messaggi {

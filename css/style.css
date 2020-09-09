@@ -233,7 +233,7 @@ aside {
   margin-right: 10px;
 }
 
-.orario {
+.ultimo-messaggio {
   font-size: 9px;
   color: #9A9FA1;
 }
@@ -307,6 +307,7 @@ aside {
   position: absolute;
   bottom: 2px;
   right: 2px;
+  color: #9A9FA1;
 }
 
 .invisible {

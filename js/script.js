@@ -1,11 +1,13 @@
 $(document).ready(function() {
   $(".inserimento-testo .fas").click(function() {
     sendMessage();
+    setTimeout(rispostaCPU, 2000);
   });
 
   $("#addTest").keydown(function(event) {
     if (event.which == 13) {
       sendMessage();
+      setTimeout(rispostaCPU, 2000);
     }
   });
 });
@@ -17,10 +19,21 @@ function sendMessage() {
   var minutes = date.getMinutes();
   var time = hours + ":" + minutes;
   if (inputValue != "") {
-    var myClone = $(".linea-inviati .messaggi-inviati").clone();
-    myClone.find(".messaggio-testo-inviato").text(inputValue);
-    myClone.find(".orario").text(time);
+    var myClone = $(".invisible .linea-inviati-template").clone();
+    myClone.find(".messaggio-testo-inviato-template").text(inputValue);
+    myClone.find(".orario-template").text(time);
     $(".nuovi-messaggi").append(myClone);
     $("#addTest").val("");
   }
+}
+
+function rispostaCPU() {
+  var date = new Date;
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var time = hours + ":" + minutes;
+  var myClone = $(".invisible .linea-ricevuti-template").clone();
+  myClone.find(".messaggio-testo-ricevuto-template").text("Ok");
+  myClone.find(".orario-template").text(time);
+  $(".nuovi-messaggi").append(myClone);
 }

@@ -309,11 +309,15 @@ aside {
   right: 2px;
 }
 
+.invisible {
+  display: none;
+}
+
 .nuovi-messaggi {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: flex-end;
-  flex-direction: column;
+  flex-direction: column; */
 }
 
 /* /MAIN CONTENT */

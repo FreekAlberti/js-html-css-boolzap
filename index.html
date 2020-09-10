@@ -70,7 +70,7 @@
           <!-- /input -->
           <!-- lista chat -->
           <ul class="lista-chat">
-            <li class="casella active">
+            <li class="casella active" data-utente="0">
               <div class="utente">
                 <img src="img/avatar_1.jpg" alt="">
                 <div class="info-notifica">
@@ -80,7 +80,7 @@
               </div>
               <div class="ultimo-messaggio">11:32</div>
             </li>
-            <li class="casella">
+            <li class="casella" data-utente="1">
               <div class="utente">
                 <img src="img/avatar_2.jpg" alt="">
                 <div class="info-notifica">
@@ -90,7 +90,7 @@
               </div>
               <div class="ultimo-messaggio">11:32</div>
             </li>
-            <li class="casella">
+            <li class="casella" data-utente="2">
               <div class="utente">
                 <img src="img/avatar_3.jpg" alt="">
                 <div class="info-notifica">
@@ -154,50 +154,139 @@
           <!-- /lista chat -->
         </aside>
         <!-- chat -->
-        <div class="main-content">
+        <div class="chat" data-conversazione="0">
           <div class="spazio-messaggi">
-            <div class="linea-ricevuti">
-              <div class="messaggi-ricevuti">
-                <div class="messaggio-testo-ricevuto">ciao</div>
-                <div class="orario">00:00</div>
-              </div>
-            </div>
-            <div class="linea-inviati">
-              <div class="messaggi-inviati">
-                <div class="messaggio-testo-inviato">ciao</div>
-                <div class="orario">00:00</div>
-              </div>
-            </div>
-            <div class="linea-ricevuti">
-              <div class="messaggi-ricevuti">
-                <div class="messaggio-testo-ricevuto">come stai?</div>
-                <div class="orario">00:00</div>
-              </div>
-            </div>
-            <!-- template -->
-            <div class="invisible">
-              <div class="linea-inviati-template linea-inviati">
-                <div class="messaggi-inviati-template messaggi-inviati">
-                  <div class="messaggio-testo-inviato-template messaggio-testo-inviato"></div>
-                  <div class="orario orario-template"></div>
+            <div class="visible">
+              <div class="linea-ricevuti">
+                <div class="messaggi-ricevuti">
+                  <div class="messaggio-testo-ricevuto">ciao<i class="fas fa-angle-down"></i></div>
+                  <div class="orario">00:00</div>
                 </div>
               </div>
-              <div class="linea-ricevuti linea-ricevuti-template">
-                <div class="messaggi-ricevuti-template messaggi-ricevuti">
-                  <div class="messaggio-testo-ricevuto-template messaggio-testo-ricevuto"></div>
-                  <div class="orario-template orario"></div>
+              <div class="linea-inviati">
+                <div class="messaggi-inviati">
+                  <div class="messaggio-testo-inviato">ciao</div>
+                  <div class="orario">00:00</div>
                 </div>
               </div>
-            </div>
-            <!-- /template -->
-            <!-- testo utente -->
-            <div class="nuovi-messaggi">
+              <div class="linea-ricevuti">
+                <div class="messaggi-ricevuti">
+                  <div class="messaggio-testo-ricevuto">come stai?</div>
+                  <div class="orario">00:00</div>
+                </div>
+              </div>
+              <!-- testo utente -->
+              <div class="nuovi-messaggi">
 
+              </div>
+              <!-- /testo utente -->
             </div>
-            <!-- /testo utente -->
+          </div>
+        </div>
+        <div class="chat" data-conversazione="1">
+          <div class="spazio-messaggi">
+            <div class="visible">
+              <div class="linea-ricevuti">
+                <div class="messaggi-ricevuti">
+                  <div class="messaggio-testo-ricevuto">ciao<i class="fas fa-angle-down"></i></div>
+                  <div class="orario">00:00</div>
+                </div>
+              </div>
+              <div class="linea-inviati">
+                <div class="messaggi-inviati">
+                  <div class="messaggio-testo-inviato">ciao</div>
+                  <div class="orario">00:00</div>
+                </div>
+              </div>
+              <div class="linea-ricevuti">
+                <div class="messaggi-ricevuti">
+                  <div class="messaggio-testo-ricevuto">come stai?</div>
+                  <div class="orario">00:00</div>
+                </div>
+              </div>
+              <!-- testo utente -->
+              <div class="nuovi-messaggi">
+
+              </div>
+              <!-- /testo utente -->
+            </div>
+          </div>
+        </div>
+        <div class="chat" data-conversazione="2">
+          <div class="spazio-messaggi">
+            <div class="visible">
+              <div class="linea-ricevuti">
+                <div class="messaggi-ricevuti">
+                  <div class="messaggio-testo-ricevuto">ciao<i class="fas fa-angle-down"></i></div>
+                  <div class="orario">00:00</div>
+                </div>
+              </div>
+              <div class="linea-inviati">
+                <div class="messaggi-inviati">
+                  <div class="messaggio-testo-inviato">ciao</div>
+                  <div class="orario">00:00</div>
+                </div>
+              </div>
+              <div class="linea-ricevuti">
+                <div class="messaggi-ricevuti">
+                  <div class="messaggio-testo-ricevuto">come stai?</div>
+                  <div class="orario">00:00</div>
+                </div>
+              </div>
+              <!-- testo utente -->
+              <div class="nuovi-messaggi">
+
+              </div>
+              <!-- /testo utente -->
+            </div>
+          </div>
+        </div>
+        <div class="chat" data-conversazione="3">
+          <div class="spazio-messaggi">
+            <div class="visible">
+              <div class="linea-ricevuti">
+                <div class="messaggi-ricevuti">
+                  <div class="messaggio-testo-ricevuto">ciao<i class="fas fa-angle-down"></i></div>
+                  <div class="orario">00:00</div>
+                </div>
+              </div>
+              <div class="linea-inviati">
+                <div class="messaggi-inviati">
+                  <div class="messaggio-testo-inviato">ciao</div>
+                  <div class="orario">00:00</div>
+                </div>
+              </div>
+              <div class="linea-ricevuti">
+                <div class="messaggi-ricevuti">
+                  <div class="messaggio-testo-ricevuto">come stai?</div>
+                  <div class="orario">00:00</div>
+                </div>
+              </div>
+              <!-- testo utente -->
+              <div class="nuovi-messaggi">
+
+              </div>
+              <!-- /testo utente -->
+            </div>
           </div>
         </div>
         <!-- /chat -->
+        <!-- template -->
+        <div class="invisible">
+          <div class="linea-inviati-template linea-inviati">
+            <div class="messaggi-inviati-template messaggi-inviati">
+              <div class="messaggio-testo-inviato-template messaggio-testo-inviato"><i class="fas fa-angle-down"></i></div>
+              <div class="orario orario-template"></div>
+            </div>
+          </div>
+          <div class="linea-ricevuti linea-ricevuti-template">
+            <div class="messaggi-ricevuti-template messaggi-ricevuti">
+              <div class="messaggio-testo-ricevuto-template messaggio-testo-ricevuto"><i class="fas fa-angle-down"></i></div>
+              <div class="orario-template orario"></div>
+            </div>
+          </div>
+        </div>
+        <!-- /template -->
         <!-- input testo -->
         <div class="inserimento-testo">
           <a href="#"><i class="far fa-smile"></i></a>

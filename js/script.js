@@ -15,33 +15,46 @@ $(document).ready(function() {
   );
   // /search chat
 
+  // angle hover WIP
+
+  $(".messaggio-testo-ricevuto").on("click", function(){
+    $(this).children("i").toggle();
+  });
+
+  $(".messaggio-testo-inviato").on("click", function(){
+    $(this).children("i").toggle();
+  });
+
+  // /angle hover
+
+
   // select chat
   $(".casella").on("click", function() {
+    // selezione chat
     if ($(this).hasClass("active") == false) {
       $(".casella.active").removeClass("active");
       $(this).addClass("active");
+      // /selezione chat
 
-      // WIP
-
+      // chat visionata
       var utente = $(this).attr("data-utente");
-      $(".chat").each(function (index) {
+      console.log(utente);
+      $(".chat").each(function () {
         var chatSelezionata = $(this).attr("data-conversazione");
+        console.log(chatSelezionata);
         if (chatSelezionata == utente) {
-          if ($(".chat").hasClass("visible") == false) {
-            $(".chat").addClass(".visible");
-          }
-          $(this).removeClass(".visible");
+          $(".chat").removeClass("corrente");
+          $(this).addClass("corrente");
         }
       });
-
-      // WIP
+      // /chat visionata
 
     }
   });
   // /select chat
 
   // send message click icon
-  $(".inserimento-testo .fas").click(function() {
+  $(".inserimento-testo .fas").on("click", function() {
     sendMessage();
   });
   // /send message click icon
@@ -68,9 +81,11 @@ function sendMessage() {
   var time = hours + ":" + minutes;
   if (inputValue != "") {
     var myClone = $(".invisible .linea-inviati-template").clone();
-    myClone.find(".messaggio-testo-inviato-template").text(inputValue);
+    var angleDown = $(".invisible .messaggio-testo-inviato-template i").clone();
+    console.log(angleDown);
+    myClone.find(".messaggio-testo-inviato-template").text(inputValue).append(angleDown);
     myClone.find(".orario-template").text(time);
-    $(".nuovi-messaggi").append(myClone);
+    $(".corrente").find(".nuovi-messaggi").append(myClone);
     $("#addTest").val("");
     setTimeout(rispostaCPU, 2000);
   }
@@ -85,8 +100,9 @@ function rispostaCPU() {
   }
   var time = hours + ":" + minutes;
   var myClone = $(".invisible .linea-ricevuti-template").clone();
-  myClone.find(".messaggio-testo-ricevuto-template").text("D'altronde");
+  var angleDown = $(".invisible .messaggio-testo-ricevuto-template i").clone();
+  myClone.find(".messaggio-testo-ricevuto-template").text("D'altronde").append(angleDown);
   myClone.find(".orario-template").text(time);
-  $(".nuovi-messaggi").append(myClone);
+  $(".corrente").find(".nuovi-messaggi").append(myClone);
 }
 // /FUNCTION

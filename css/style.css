@@ -7,6 +7,9 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.chat.corrente {
+  display: flex;
+}
 /* /MIX */
 
 
@@ -258,7 +261,7 @@ aside {
   width: 70%;
   background-image: url(../img/mine.jpg);
   overflow: auto;
-  display: flex;
+  display: none;
   justify-content: center;
 }
 
@@ -318,7 +321,8 @@ aside {
   display: none;
 }
 
-.visible {
+.conversazione-totale i {
+  color: gray;
   display: none;
 }
 

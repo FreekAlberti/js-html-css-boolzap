@@ -318,6 +318,10 @@ aside {
   display: none;
 }
 
+.visible {
+  display: none;
+}
+
 /* /MAIN CONTENT */
 
 /* INSERIMENTO TESTO */

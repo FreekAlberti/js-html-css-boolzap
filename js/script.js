@@ -20,10 +20,22 @@ $(document).ready(function() {
     if ($(this).hasClass("active") == false) {
       $(".casella.active").removeClass("active");
       $(this).addClass("active");
+
+      // WIP
+
       var utente = $(this).attr("data-utente");
       $(".chat").each(function (index) {
-      console.log(index + ": " + $(this).attr("data-conversazione"));
+        var chatSelezionata = $(this).attr("data-conversazione");
+        if (chatSelezionata == utente) {
+          if ($(".chat").hasClass("visible") == false) {
+            $(".chat").addClass(".visible");
+          }
+          $(this).removeClass(".visible");
+        }
       });
+
+      // WIP
+
     }
   });
   // /select chat

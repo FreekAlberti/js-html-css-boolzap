@@ -217,6 +217,10 @@ aside {
   border-bottom: 1px solid #F1F1F1;
 }
 
+.casella:hover {
+  background-color: #F3EEEA;
+}
+
 .active {
   background-color: #E9EBEB;
 }

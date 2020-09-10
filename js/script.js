@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  // search chat
   $(".search-box").keyup(function() {
       var toSearch = $(".search-box").val().toUpperCase();
       $(".nome-chat").each(function() {
@@ -12,20 +13,34 @@ $(document).ready(function() {
       )
     }
   );
+  // /search chat
 
+  // select chat
+  $(".casella").click(function() {
+    if ($(this).hasClass("active") == false) {
+      $(".casella.active").removeClass("active");
+      $(this).addClass("active");
+  }
+  });
+  // /select chat
+
+  // send message click icon
   $(".inserimento-testo .fas").click(function() {
     sendMessage();
-    setTimeout(rispostaCPU, 2000);
   });
+  // /send message click icon
 
+  // send message click enter
   $("#addTest").keydown(function(event) {
     if (event.which == 13) {
       sendMessage();
-      setTimeout(rispostaCPU, 2000);
     }
   });
+  // /send message click enter
+
 });
 
+// FUNCTION
 function sendMessage() {
   var inputValue = $("#addTest").val();
   var date = new Date;
@@ -41,6 +56,7 @@ function sendMessage() {
     myClone.find(".orario-template").text(time);
     $(".nuovi-messaggi").append(myClone);
     $("#addTest").val("");
+    setTimeout(rispostaCPU, 2000);
   }
 }
 
@@ -57,3 +73,4 @@ function rispostaCPU() {
   myClone.find(".orario-template").text(time);
   $(".nuovi-messaggi").append(myClone);
 }
+// /FUNCTION

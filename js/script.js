@@ -40,7 +40,6 @@ $(document).ready(function() {
       var img = $(this).find("img").attr("src");
       var name = $(this).find(".nome-chat").text();
       var time = $(this).find(".ultimo-messaggio").text();
-      console.log(time);
       // /aggiunta attributi
 
       // chat visionata
@@ -90,8 +89,7 @@ function sendMessage() {
   }
   var time = hours + ":" + minutes;
   if (inputValue != "") {
-    numeroChat = $(".chat.corrente").attr("data-conversazione");
-    console.log(numeroChat);
+    var numeroChat = $(".chat.corrente").attr("data-conversazione");
     var myClone = $(".invisible .linea-inviati-template").clone();
     $(".chat-corrente .accesso-chat-corrente").text("Sta scrivendo...");
     var angleDown = $(".invisible .messaggio-testo-inviato-template i").clone();
@@ -100,7 +98,7 @@ function sendMessage() {
     $(".corrente").find(".nuovi-messaggi").append(myClone);
     $("#addTest").val("");
     setTimeout(function() {
-      rispostaCPU();
+      rispostaCPU(numeroChat);
       var ora = $(".casella.active").find(".ultimo-messaggio").text();
       $(".chat-corrente .accesso-chat-corrente").html("Ultimo accesso oggi alle ore " + "<span class=\"time\">" + ora + "</span>");
     }, 2000);
@@ -109,7 +107,7 @@ function sendMessage() {
 
 //WIP TIME SET UP
 
-function rispostaCPU() {
+function rispostaCPU(numeroChat) {
   var date = new Date;
   var hours = date.getHours();
   var minutes = date.getMinutes();
@@ -121,7 +119,6 @@ function rispostaCPU() {
   var angleDown = $(".invisible .messaggio-testo-ricevuto-template i").clone();
   myClone.find(".messaggio-testo-ricevuto-template").text("D'altronde").append(angleDown);
   myClone.find(".orario-template").text(time);
-  console.log(numeroChat);
-  $("[data-conversazione*=numeroChat]").find(".nuovi-messaggi").append(myClone);
+  $("[data-conversazione*=" + numeroChat + "]").find(".nuovi-messaggi").append(myClone);
 }
 // /FUNCTION

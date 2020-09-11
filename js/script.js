@@ -90,9 +90,9 @@ function sendMessage() {
   }
   var time = hours + ":" + minutes;
   if (inputValue != "") {
+    numeroChat = $(".chat.corrente").attr("data-conversazione");
+    console.log(numeroChat);
     var myClone = $(".invisible .linea-inviati-template").clone();
-    // var accesso = $(".chat-corrente .accesso-chat-corrente").html();
-    // console.log(accesso);
     $(".chat-corrente .accesso-chat-corrente").text("Sta scrivendo...");
     var angleDown = $(".invisible .messaggio-testo-inviato-template i").clone();
     myClone.find(".messaggio-testo-inviato-template").text(inputValue).append(angleDown);
@@ -102,7 +102,7 @@ function sendMessage() {
     setTimeout(function() {
       rispostaCPU();
       var ora = $(".casella.active").find(".ultimo-messaggio").text();
-      $(".chat-corrente .accesso-chat-corrente").text("Ultimo accesso oggi alle ore " + "<span class=\"time\">" + ora + "</span>");
+      $(".chat-corrente .accesso-chat-corrente").html("Ultimo accesso oggi alle ore " + "<span class=\"time\">" + ora + "</span>");
     }, 2000);
   }
 }
@@ -121,6 +121,7 @@ function rispostaCPU() {
   var angleDown = $(".invisible .messaggio-testo-ricevuto-template i").clone();
   myClone.find(".messaggio-testo-ricevuto-template").text("D'altronde").append(angleDown);
   myClone.find(".orario-template").text(time);
-  $(".corrente").find(".nuovi-messaggi").append(myClone);
+  console.log(numeroChat);
+  $("[data-conversazione*=numeroChat]").find(".nuovi-messaggi").append(myClone);
 }
 // /FUNCTION

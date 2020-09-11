@@ -53,7 +53,7 @@ $(document).ready(function() {
           $(document).find(".chat-corrente img").attr("src", img);
           $(document).find(".chat-corrente .time").text(time);
         }
-      });    // var accesso = $(".chat-corrente .accesso-chat-corrente").text();
+      });
       // /chat visionata
 
     }
@@ -75,8 +75,6 @@ $(document).ready(function() {
   // /send message click enter
 
 });
-
-//WIP TIME SET UP
 
 // FUNCTION
 function sendMessage() {
@@ -104,8 +102,6 @@ function sendMessage() {
     }, 2000);
   }
 }
-
-//WIP TIME SET UP
 
 function rispostaCPU(numeroChat) {
   var date = new Date;

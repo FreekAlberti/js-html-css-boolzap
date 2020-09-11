@@ -346,10 +346,25 @@ aside {
 }
 
 .lista-azioni {
-  display: none;
-  height: 50px;
-  width: 50px;
-  background-color: red;
+  white-space: nowrap;
+  background-color: #fff;
+  list-style: none;
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  padding: 5px 10px;
+  box-shadow: 2px 2px 5px black;
+  border-radius: 5px;
+}
+
+.lista-azioni li {
+  margin: 5px 0;
+}
+
+.lista-azioni a {
+  font-size: 13px;
+  text-decoration: none;
+  color: black;
 }
 
 /* /MAIN CONTENT */

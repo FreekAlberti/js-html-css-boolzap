@@ -345,6 +345,13 @@ aside {
   display: none;
 }
 
+.lista-azioni {
+  display: none;
+  height: 50px;
+  width: 50px;
+  background-color: red;
+}
+
 /* /MAIN CONTENT */
 
 /* INSERIMENTO TESTO */

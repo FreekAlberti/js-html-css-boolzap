@@ -17,12 +17,12 @@ $(document).ready(function() {
 
   // angle hover WIP
 
-  // $(document).on("click", function(){
-  //   $(".messaggio-testo-ricevuto-template").children("i").toggle();
+  // $(".conversazione-totale .chat .corrente i").on("click", function(){
+  //   $(this).find(".lista-azioni").show();
   // });
-  //
+
   // $(document).on("click", function(){
-  //   $(".messaggio-testo-inviato-template").children("i").toggle();
+  //   $(".conversazione-totale").find("i").toggle();
   // });
 
   // /angle hover
@@ -36,17 +36,25 @@ $(document).ready(function() {
       $(this).addClass("active");
       // /selezione chat
 
+      // aggiunta attributi
+      var img = $(this).find("img").attr("src");
+      var name = $(this).find(".nome-chat").text();
+      var time = $(this).find(".ultimo-messaggio").text();
+      console.log(time);
+      // /aggiunta attributi
+
       // chat visionata
       var utente = $(this).attr("data-utente");
-      console.log(utente);
       $(".chat").each(function () {
         var chatSelezionata = $(this).attr("data-conversazione");
-        console.log(chatSelezionata);
         if (chatSelezionata == utente) {
           $(".chat").removeClass("corrente");
           $(this).addClass("corrente");
+          $(document).find(".chat-corrente .nome-chat-corrente").text(name);
+          $(document).find(".chat-corrente img").attr("src", img);
+          $(document).find(".chat-corrente .time").text("ciao");
         }
-      });
+      });    // var accesso = $(".chat-corrente .accesso-chat-corrente").text();
       // /chat visionata
 
     }
@@ -69,6 +77,8 @@ $(document).ready(function() {
 
 });
 
+//WIP TIME SET UP
+
 // FUNCTION
 function sendMessage() {
   var inputValue = $("#addTest").val();
@@ -81,15 +91,21 @@ function sendMessage() {
   var time = hours + ":" + minutes;
   if (inputValue != "") {
     var myClone = $(".invisible .linea-inviati-template").clone();
+    $(".chat-corrente .accesso-chat-corrente").text("Sta scrivendo...");
     var angleDown = $(".invisible .messaggio-testo-inviato-template i").clone();
-    console.log(angleDown);
     myClone.find(".messaggio-testo-inviato-template").text(inputValue).append(angleDown);
     myClone.find(".orario-template").text(time);
     $(".corrente").find(".nuovi-messaggi").append(myClone);
     $("#addTest").val("");
-    setTimeout(rispostaCPU, 2000);
+    setTimeout(function() {
+      rispostaCPU();
+      var ora = $(".casella.active").find(".ultimo-messaggio").text();
+      $(".chat-corrente .accesso-chat-corrente").text("Ultimo accesso oggi alle ore " + ora);
+    }, 2000);
   }
 }
+
+//WIP TIME SET UP
 
 function rispostaCPU() {
   var date = new Date;

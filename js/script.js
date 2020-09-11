@@ -17,13 +17,13 @@ $(document).ready(function() {
 
   // angle hover WIP
 
-  $(".messaggio-testo-ricevuto").on("click", function(){
-    $(this).children("i").toggle();
-  });
-
-  $(".messaggio-testo-inviato").on("click", function(){
-    $(this).children("i").toggle();
-  });
+  // $(document).on("click", function(){
+  //   $(".messaggio-testo-ricevuto-template").children("i").toggle();
+  // });
+  //
+  // $(document).on("click", function(){
+  //   $(".messaggio-testo-inviato-template").children("i").toggle();
+  // });
 
   // /angle hover
 

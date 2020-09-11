@@ -295,6 +295,16 @@ aside {
   word-break: break-word;
 }
 
+.messaggio-testo-ricevuto i {
+  display: none;
+}
+
+.messaggio-testo-ricevuto:hover i {
+  display: inline-block;
+  color: #B1B1B1;
+}
+
+
 .messaggi-inviati {
   display: block;
   position: relative;
@@ -307,6 +317,15 @@ aside {
   border-radius: 5px;
   max-width: 30ch;
   word-break: break-word;
+}
+
+.messaggio-testo-inviato i {
+  display: none;
+}
+
+.messaggio-testo-inviato:hover i {
+  display: inline-block;
+  color: #B1B1B1;
 }
 
 .orario {

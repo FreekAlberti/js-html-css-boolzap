@@ -260,14 +260,14 @@ aside {
   height: 80%;
   width: 70%;
   background-image: url(../img/mine.jpg);
-  overflow: auto;
+  overflow-y: scroll;
   display: none;
   justify-content: center;
 }
 
 .spazio-messaggi {
   height: 100%;
-  width: 85%;
+  width: 65%;
   padding: 20px 0;
 }
 
@@ -285,9 +285,6 @@ aside {
   display: block;
   position: relative;
   margin: 5px 0;
-}
-
-.messaggio-testo-ricevuto {
   padding: 10px;
   background-color: white;
   border-radius: 5px;
@@ -295,23 +292,23 @@ aside {
   word-break: break-word;
 }
 
-.messaggio-testo-ricevuto i {
+.messaggi-ricevuti i {
   display: none;
 }
 
-.messaggio-testo-ricevuto:hover i {
+.messaggi-ricevuti:hover i {
   display: inline-block;
   color: #B1B1B1;
 }
 
+.messaggio-testo-ricevuto {
+  display: inline-block;
+}
 
 .messaggi-inviati {
   display: block;
   position: relative;
   margin: 5px 0;
-}
-
-.messaggio-testo-inviato {
   padding: 10px;
   background-color: #D4F1BA;
   border-radius: 5px;
@@ -319,11 +316,15 @@ aside {
   word-break: break-word;
 }
 
-.messaggio-testo-inviato i {
+.messaggio-testo-inviato {
+  display: inline-block;
+}
+
+.messaggi-inviati i {
   display: none;
 }
 
-.messaggio-testo-inviato:hover i {
+.messaggi-inviati:hover i {
   display: inline-block;
   color: #B1B1B1;
 }
@@ -346,11 +347,11 @@ aside {
 }
 
 .lista-azioni {
+  display: none;
   white-space: nowrap;
   background-color: #fff;
   list-style: none;
   position: absolute;
-  z-index: 1;
   text-align: center;
   padding: 5px 10px;
   box-shadow: 2px 2px 5px black;

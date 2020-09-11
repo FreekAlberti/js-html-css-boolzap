@@ -15,18 +15,6 @@ $(document).ready(function() {
   );
   // /search chat
 
-  // angle hover WIP
-
-  // $(".conversazione-totale .chat .corrente i").on("click", function(){
-  //   $(this).find(".lista-azioni").show();
-  // });
-
-  // $(document).on("click", function(){
-  //   $(".conversazione-totale").find("i").toggle();
-  // });
-
-  // /angle hover
-
 
   // select chat
   $(".casella").on("click", function() {
@@ -60,6 +48,15 @@ $(document).ready(function() {
   });
   // /select chat
 
+  // angle hover WIP
+
+  $(document).on("click", ".conversazione-totale i",
+    function(){
+      $(this).siblings(".lista-azioni").toggle();
+  });
+  
+  // /angle hover
+
   // send message click icon
   $(".inserimento-testo .fas").on("click", function() {
     sendMessage();
@@ -75,6 +72,10 @@ $(document).ready(function() {
   // /send message click enter
 
 });
+
+
+
+
 
 // FUNCTION
 function sendMessage() {

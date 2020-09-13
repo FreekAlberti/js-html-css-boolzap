@@ -53,8 +53,9 @@ $(document).ready(function() {
   $(document).on("click", ".conversazione-totale i",
     function(){
       $(this).siblings(".lista-azioni").toggle();
+      removeMessage();
   });
-  
+
   // /angle hover
 
   // send message click icon
@@ -74,10 +75,8 @@ $(document).ready(function() {
 });
 
 
-
-
-
 // FUNCTION
+
 function sendMessage() {
   var inputValue = $("#addTest").val();
   var date = new Date;
@@ -117,5 +116,11 @@ function rispostaCPU(numeroChat) {
   myClone.find(".messaggio-testo-ricevuto-template").text("D'altronde").append(angleDown);
   myClone.find(".orario-template").text(time);
   $("[data-conversazione*=" + numeroChat + "]").find(".nuovi-messaggi").append(myClone);
+}
+
+function removeMessage() {
+  $(document).on("click", ".delete", function() {
+    $(this).parents(".delete-message").hide();
+  })
 }
 // /FUNCTION

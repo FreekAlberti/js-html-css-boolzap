@@ -42,8 +42,8 @@ $(document).ready(function() {
           $(document).find(".chat-corrente .time").text(time);
         }
       });
-      // /chat visionata
 
+      // /chat visionata
     }
   });
   // /select chat
@@ -95,6 +95,7 @@ function sendMessage() {
     myClone.find(".orario-template").text(time);
     $(".corrente").find(".nuovi-messaggi").append(myClone);
     $("#addTest").val("");
+    scrollChat();
     setTimeout(function() {
       rispostaCPU(numeroChat);
       var ora = $(".casella.active").find(".ultimo-messaggio").text();
@@ -102,6 +103,13 @@ function sendMessage() {
     }, 2000);
   }
 }
+
+// scroll chat
+function scrollChat() {
+  var altezza = $(".chat.corrente").prop("scrollHeight");
+  $(".chat.corrente").scrollTop(altezza);
+}
+// scroll chat
 
 function rispostaCPU(numeroChat) {
   var date = new Date;
@@ -116,6 +124,7 @@ function rispostaCPU(numeroChat) {
   myClone.find(".messaggio-testo-ricevuto-template").text("D'altronde").append(angleDown);
   myClone.find(".orario-template").text(time);
   $("[data-conversazione*=" + numeroChat + "]").find(".nuovi-messaggi").append(myClone);
+  scrollChat();
 }
 
 function removeMessage() {
